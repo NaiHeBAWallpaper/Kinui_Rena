@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 let isVoicelinePlaying = false;
 
@@ -62,21 +63,22 @@ const AUDIO_DETAIL = [
                 "リボンとかを作って、友達にあげたりしてた。"
             ],
             English: [
-                "You know, I've always been good with my hands since I was little.",
-                "I used to make things like ribbons and give them to my friends."
+                "You know, I've always been good with my hands, ever since I was a kid.",
+                "I would make things like ribbons and give them to my friends."
             ],
             Chinese: [
                 "我呢，从小就手很巧。",
                 "会做些蝴蝶结之类的东西送给朋友。"
             ],
             TraditionalChinese: [
-                "我呢，從小就手很巧。",
-                "會做些蝴蝶結之類的東西送給朋友。"
+                "我呢，從小時候開始手就很靈活。",
+                "我會做蝴蝶結之類的，送給朋友。"
             ],
             Korean: [
-                "아시다시피, 저는 어린 시절부터 항상 손을 잘 사용했습니다.",
-                "저는 리본 같은 것들을 만들어서 친구들에게 주곤 했습니다."
-            ]
+                "있지, 난 어렸을 때부터 손재주가 좋았어.",
+                "리본 같은 걸 만들어서, 친구에게 주곤 했지."
+            ],
+            Thai: ["ฉันน่ะ เก่งงานฝีมือ มาตั้งแต่เด็กๆ แล้ว","ฉันทำพวกโบว์ติดผม แจกเพื่อนบ่อยๆ เลย"]
         }
     },
     {
@@ -87,9 +89,9 @@ const AUDIO_DETAIL = [
                 "こんな小さなものでも、誰かを喜ばせることができるんだ、って。"
             ],
             English: [
-                "It made me so happy when everyone was pleased with them.",
-                "...That's when I realized.",
-                "That even something as small as this could bring joy to someone."
+                "I was happy to see that everyone liked them.",
+                "...And that's how I learned...",
+                "...that even something small... ...can make someone feel happy."
             ],
             Chinese: [
                 "看到大家开心我就很满足。",
@@ -97,15 +99,16 @@ const AUDIO_DETAIL = [
                 "就算是这样小小的东西，也能让人感到开心。"
             ],
             TraditionalChinese: [
-                "看到大家開心我就很滿足。",
-                "……然後我就意識到了。",
-                "就算是這樣小小的東西，也能讓人感到開心。"
+                "大家都很喜歡，我也很開心。",
+                "……那時候我明白了。",
+                "就算是這麼小的東西，也能讓人感到開心。"
             ],
             Korean: [
-                "모든 사람들이 그들을 기쁘게 할 때 그것은 나를 너무 행복하게 했다.",
-                "...그때 깨달았어요.",
-                "이렇게 작은 것이라도 누군가에게 기쁨을 가져다 줄 수 있다는 겁니다."
-            ]
+                "다들 좋아해 줘서 기뻤어.",
+                "……그렇게 깨달은 거야.",
+                "이렇게 작은 것으로도, 누군가를 기쁘게 할 수 있구나, 라고."
+            ],
+            Thai: ["พอทุกคนชอบฉันก็ดีใจ","ฉันก็เลยได้รู้ว่า...","ถึงจะเป็นของชิ้นเล็กๆ แบบนี้ ก็ทำให้ใครบางคน มีความสุขได้ด้วยสินะ"]
         }
     },
     {
@@ -115,21 +118,22 @@ const AUDIO_DETAIL = [
                 "自分でデザインした服とかアクセサリーとか、みんなが楽しんでくれると私も嬉しいから。"
             ],
             English: [
-                "That's why I started aiming to be a fashion designer.",
-                "Because it makes me happy when everyone enjoys the clothes and accessories I design."
+                "That's why I started dreaming of becoming a fashion designer.",
+                "Because it makes me happy to see others enjoy... ...the clothes and accessories I design."
             ],
             Chinese: [
                 "所以我才会立志成为时装设计师。",
                 "自己设计的服装和饰品，大家如果喜欢，我也会很开心。"
             ],
             TraditionalChinese: [
-                "所以我才會立志成為時裝設計師。",
-                "自己設計的服裝和飾品，大家如果喜歡，我也會很開心。"
+                "所以，我才會開始以時裝設計師為目標。",
+                "如果我設計的衣服或飾品，能讓大家高興的話，我也會很開心。"
             ],
             Korean: [
-                "그래서 패션 디자이너가 되고 싶었어요.",
-                "왜냐하면 모든 사람들이 제가 디자인하는 옷과 액세서리를 좋아할 때 저는 행복해지기 때문입니다."
-            ]
+                "그래서 패션 디자이너를 꿈꾸게 됐던 거야.",
+                "내가 디자인한 옷이라든가 악세서리를, 모두가 즐겨주면 나도 기쁘니까."
+            ],
+            Thai: ["ฉันก็เลยฝันอยากเป็น แฟชั่นดีไซเนอร์มาตลอดเลย","เพราะถ้าทุกคนชอบเสื้อผ้าหรือ เครื่องประดับที่ฉันออกแบบ ฉันก็จะมีความสุขไปด้วย"]
         }
     },
     {
@@ -139,21 +143,22 @@ const AUDIO_DETAIL = [
                 "それもあって、こうやって気を使ってくれたんだと思ってるし。"
             ],
             English: [
-                "You kind of get that feeling too, don't you, Sensei?",
-                "I figure that's part of the reason why you've been so thoughtful toward me."
+                "Sensei, you know how that feels, right?",
+                "I think that's also why you keep looking out for me."
             ],
             Chinese: [
                 "这种感觉，老师大概也能理解吧？",
                 "所以我觉得，你才会这样为我费心。"
             ],
             TraditionalChinese: [
-                "這種感覺，老師大概也能理解吧？",
-                "所以我覺得，你才會這樣為我費心。"
+                "那種感覺，老師應該多少能夠理解吧？",
+                "也是因為這樣，你才會這麼關心我。"
             ],
             Korean: [
-                "너도 그런 느낌이 들지, 선생님?",
-                "그게 네가 내게 대해 너무 신중하게 생각하는 이유 중 하나인 것 같아요."
-            ]
+                "그런 거, 선생님도 어떤 건지 이해하지?",
+                "그런 것도 있어서, 이렇게 신경 써주는 거라고 생각하는데."
+            ],
+            Thai: ["เรื่องแบบนี้น่ะ คุณครูพอเข้าใจใช่มั้ย?","พอมีเรื่องแบบนั้น ฉันก็เลยคิดว่าตัวเอง ใส่ใจในงานนี้มากเลยละ"]
         }
     },
     {
@@ -162,17 +167,18 @@ const AUDIO_DETAIL = [
                 "え……？今日どうだったかって……？"
             ],
             English: [
-                "Eh...? You're asking how today was...?"
+                "Huh...? How was today...?"
             ],
             Chinese: [
                 "诶……？问今天过得怎么样……？"
             ],
             TraditionalChinese: [
-                "誒……？問今天過得怎麼樣……？"
+                "咦……？問我今天怎麼樣……？"
             ],
             Korean: [
-                "오늘 어땠는지 궁금하군요"
-            ]
+                "어……? 오늘은 어땠냐고……?"
+            ],
+            Thai: ["หืม...? วันนี้เป็นยังไงบ้างน่ะเหรอ...?"]
         }
     },
     {
@@ -181,17 +187,18 @@ const AUDIO_DETAIL = [
                 "シャーッ！い、言わせないでよ！バカ先生！"
             ],
             English: [
-                "Hiss! D-Don't make me say it out loud! Dummy Sensei!"
+                "Shyaah! D-Don't make me say it! Idiot Sensei!"
             ],
             Chinese: [
                 "（哈气）——！不、不要说这种话！笨蛋老师！"
             ],
             TraditionalChinese: [
-                "（哈氣）——！不、不要說這種話！笨蛋老師！"
+                "嚇啊──！！別，別讓我說出口啊！笨蛋老師！"
             ],
             Korean: [
-                "난 소리치러 말하지 마 멍청한 상사야"
-            ]
+                "샤아악! 마, 말하게 하지 마! 바보 선생님!"
+            ],
+            Thai: ["ว้ากก! ยะ... อย่าให้ฉันต้องพูดสิ! คุณครูคนบื้อ!"]
         }
     }
 ];
@@ -303,7 +310,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -480,6 +487,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -493,6 +510,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -502,7 +521,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
